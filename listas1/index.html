@@ -2,39 +2,62 @@
 <html lang="es">
 <head>
     <!--Etiquetas obligatorias-->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <meta name="description" content="Mi primera página web" />
-    <meta name="keywords" content="html, css, JavaScript, TypeScript, Angular" />
-    <meta name="author" content="Raúl" />
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <!-- Etiqueta opcionales -->
+    <meta name="description" content="Mi primera página web" >
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular" >
+    <meta name="author" content="Francisco García" >
     <title>Página de ejemplo</title>
+
 </head>
-<body>
-    <ol>
-        <li>Elemento 1</li>
-        <ul>
-            <li>Elemento 1.1</li>
-            <li>Elemento 1.2</li>
-            <ul>
-                <li>Elemento 1.2.1</li>
-                <li>Elemento 1.2.2</li>
-                <li>Elemento 1.2.3</li>
-            </ul>
-            <li>Elemento 1.3</li>
-            <li>Elemento 1.4</li>
-            <li>Elemento 1.5</li>
-        </ul>
-        <li>Elemento 2</li>
-        <ul>
-            <li>Elemento 2.1</li>
-            <li>Elemento 2.2</li>
-            <li>Elemento 2.3</li>
-            <ol>
-                <li>Elemento 2.3.1</li>
-                <li>Elemento 2.3.2</li>
-            </ol>
-        </ul>
-        <li>Elemento 3</li>
-    </ol>
-</body>
+    <body>
+
+        <ol>
+            <li><em>Elemento 1</em>
+                <ul>
+                    <li>Elemento 1.1</li>
+                    <li>Elemento 1.2
+                        <ul>
+                            <li><a href="https://www.marca.com/" title="En esta página encontrarás información de fútbol">Página del Marca</a></li>
+                            <li><a href="https://www.eoi.es/es/espacios-coworking/34248/elche" title="Página de la EOI de Elche"
+                                target="_blank" rel="noopener noreferer">EOI de Elche</a></li>
+                            <li>Elemento 1.2.3</li>
+                        </ul>
+                    </li>
+                    <li>Elemento 1.3</li>
+                    <li>Elemento 1.4</li>
+                    <li>Elemento 1.5</li>
+                </ul>
+            </li>
+            <li>Elemento 2
+                <ul>
+                    <li>Elemento 2.1</li>
+                    <li>Elemento 2.2</li>
+                    <li>Elemento 2.3
+                        <ol>
+                            <li>
+                                <a href="https://www.eoi.es/es/espacios-coworking/34248/elche">
+                                    <img src="../../Web//logo-eoi.png" alt="Logo EOI desde el PC">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.eoi.es/es/espacios-coworking/34248/elche">
+                                    Imagen EOI desde Web : <img src="https://www.eoi.es/sites/default/files/logo-eoi.png" alt="Logo EOI desde Internet">
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <li>Símbolos raros: &lt;&gt; y &amp;</li>
+        </ol>
+        <dl>
+            <dt><strong>Java</strong></dt>
+            <dd>Java es un lenguaje de programación que lleva más de 30 años en el mercado</dd>
+            <dt>HTML</dt>
+            <dd>Este lenguaje, realmente no es un lenguaje de programación, sino, un lenguaje de marcas, donde las etiquetas ayudan al navegador a saber que quieres expresar gráficamente</dd>
+        </dl>
+
+    </body>
 </html>
