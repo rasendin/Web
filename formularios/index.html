@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Etiquetas obligatorias-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <!--Etiquetas opcionales-->
+    <meta name="description" content="Mi primera página web" />
+    <meta name="keywords" content="html, css, JavaScript, TypeScript, Angular" />
+    <meta name="author" content="Raúl" />
+    <title>Formularios</title>
+</head>
+<body>
+
+    <form>
+        <label for="nombre">
+            Nombre: <input type="text" name="nombre" id="nombre" size="80">
+        </label>
+        <br>
+        <label for="apellidos">
+            Apellidos: <input type="text" name="apellidos" id="apellidos" size="80" placeholder="apellido por defecto">
+        </label>
+        <br>
+        <label>
+            Contraseña: <input type="password" name="password" size="12" minlength="6" maxlength="12">
+        </label>
+        <br>
+        <label>
+            Edad: <input type="number" name="number" min="0" max="120">
+        </label>
+        <br>
+        <p>
+        <label>
+            Fecha y hora local: <input type="datetime-local" name="datetimelocal">
+        </label>
+        </p>
+
+        <br>
+        <p>
+        <label>
+            Fecha de nacimiento: <input type="date" name="fechaNac" max="27/01/2023" required>
+        </label>
+        </p>
+        <br>
+        <p>
+            <label>
+                Sexo: 
+            </label>
+            <label>
+                Hombre: <input type="radio" name="sexo" value="H">
+            </label>
+            <label>
+                Mujer: <input type="radio" name="sexo" value="M">
+            </label>
+        </p>
+        <p>
+            <label>
+                Fotos de perfil: <input type="file" name="file" accept="image/*" multiple>
+            </label>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="SUBMIT">
+            <input type="reset" name="reset" value="RESET">
+            <input type="button" name="button" value="BUTTON">
+        </p>
+    </form>
+
+</body>
+</html>
