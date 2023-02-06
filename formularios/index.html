@@ -2,68 +2,79 @@
 <html lang="es">
 <head>
     <!--Etiquetas obligatorias-->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <!--Etiquetas opcionales-->
-    <meta name="description" content="Mi primera página web" />
-    <meta name="keywords" content="html, css, JavaScript, TypeScript, Angular" />
-    <meta name="author" content="Raúl" />
-    <title>Formularios</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <!-- Etiqueta opcionales -->
+    <meta name="description" content="Mi primera página web" >
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular" >
+    <meta name="author" content="Francisco García" >
+    <title>Página de ejemplo</title>
+
 </head>
-<body>
+    <body>
 
-    <form>
-        <label for="nombre">
-            Nombre: <input type="text" name="nombre" id="nombre" size="80">
-        </label>
-        <br>
-        <label for="apellidos">
-            Apellidos: <input type="text" name="apellidos" id="apellidos" size="80" placeholder="apellido por defecto">
-        </label>
-        <br>
-        <label>
-            Contraseña: <input type="password" name="password" size="12" minlength="6" maxlength="12">
-        </label>
-        <br>
-        <label>
-            Edad: <input type="number" name="number" min="0" max="120">
-        </label>
-        <br>
-        <p>
-        <label>
-            Fecha y hora local: <input type="datetime-local" name="datetimelocal">
-        </label>
-        </p>
+        <!-- Control + K + C para comentar -->
+        <!-- table>(tr>th*6)+(tr*6>td*6) -->
+        <!-- ul>li*6 -->
+        <!-- ol>li*6 -->
 
-        <br>
-        <p>
-        <label>
-            Fecha de nacimiento: <input type="date" name="fechaNac" max="27/01/2023" required>
-        </label>
-        </p>
-        <br>
-        <p>
-            <label>
-                Sexo: 
+        <form>
+            <label for="nombre">
+                Nombre: <input type="text" name="nombre" id="nombre" size="80" required>
             </label>
-            <label>
-                Hombre: <input type="radio" name="sexo" value="H">
+            <br>
+            <label for="apellidos">
+                Apellidos: <input type="text" name="apellidos" id="apellidos" size="80"  placeholder="apellido por defecto">
             </label>
+            <br>
             <label>
-                Mujer: <input type="radio" name="sexo" value="M">
+                Password: <input type="password" name="password" size="12" minlength="6" maxlength="12">
             </label>
-        </p>
-        <p>
+            <br>
             <label>
-                Fotos de perfil: <input type="file" name="file" accept="image/*" multiple>
+                Edad: <input type="number" name="number" min="0" max="120" step="2" value="25">
             </label>
-        </p>
-        <p>
-            <input type="submit" name="submit" value="SUBMIT">
-            <input type="reset" name="reset" value="RESET">
-            <input type="button" name="button" value="BUTTON">
-        </p>
-    </form>
+            <br>
+            <p>
+                <label>
+                    Fecha y hora local: <input type="datetime-local" name="datetimelocal">
+                </label>
+            </p>
+            
+            <br>
+            <p>
+                <label>
+                    Fecha de Nacimiento: <input type="date" name="fechaNac" max="2023-01-27" required>                    
+                </label>
+            </p>
+            <br>
+            <p>
+                <label>
+                    Sexo:
+                </label>
+                <label>
+                    Hombre <input type="radio" name="sexo" value="H">
+                </label>
+                <label>
+                    Mujer <input type="radio" name="sexo" value="M" checked>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Fotos de perfil <input type="file" name="file" accept="image/*" multiple>
+                </label>
+            </p>
+            <p>
+                <input type="submit" name="submit" value="ENVIAR">
+                <input type="reset" name="reset" value="BORRAR">
+                <input type="button" name="button1" value="BOTÓN 1">
+                <input type="button" name="button2" value="BOTÓN 2">
+                <input type="button" name="button3" value="BOTÓN 3">
+                <button>
+                    <img src="images/eoi.png" alt="Logo EOI">                   
+                </button>
+            </p>
+        </form>
 
-</body>
+    </body>
 </html>
