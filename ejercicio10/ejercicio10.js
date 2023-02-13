@@ -117,3 +117,35 @@ console.log(includesAOrE);
 // 4) ORDENA EL ARRAY DE DIAS DESCENDENTEMENTE.
 
 console.log(dias.reverse((a,b)=>a-b));
+
+// 1.Dada una matriz de números, usa el método Array.map() para multiplicar cada número por 2 y devolver una nueva matriz con los resultados.
+// 2.Dada una matriz de nombres de frutas, use el método Array.filter() para devolver solo aquellos nombres que contienen la letra "a".
+// 3.Dada una matriz de números, use el método Array.reduce() para sumar todos los números y devolver el resultado total.
+// 4.Dada una matriz de objetos con propiedades nombre y edad, use el método Array.sort() para ordenar los objetos por edad de menor a mayor.
+// 5.Dada una matriz de números, use el método Array.forEach() para imprimir cada número en la consola.
+
+// 1.Dada una matriz de números, usa el método Array.map() para multiplicar cada número por 2 y devolver una nueva matriz con los resultados.
+
+let numeros = new Array(2,4,6,8);
+let multiplicar = numeros.map((value) =>{
+    return value*2;
+})
+console.log(multiplicar);
+console.log(numeros);
+
+// 2.Dada una matriz de nombres de frutas, use el método Array.filter() para devolver solo aquellos nombres que contienen la letra "a".
+
+let frutas = new Array("Melón","Sandía","Naranja","Limón");
+let filtro = frutas.filter((f) => /a/i.test(f));
+console.log(filtro);
+
+// 3.Dada una matriz de números, use el método Array.reduce() para sumar todos los números y devolver el resultado total.
+
+const reducir = numeros.reduce(fu => {
+    let inicio = 0;
+    for(let i = 0; i < numeros.length;i++){
+        inicio += numeros[i];
+    }
+    return inicio;
+});
+console.log(reducir);
