@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Etiquetas obligatorias-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <!--Etiquetas opcionales-->
+    <meta name="description" content="Mi primera página web" />
+    <meta name="keywords" content="html, css, JavaScript, TypeScript, Angular" />
+    <meta name="author" content="Raúl" />
+    <title>Página de ejemplo</title>
+</head>
+<body>
+    <script>
+        let s1="holalalalala";
+        let s2="la";
+        let s3="x";
+
+        console.log(s1.replaceAll (s2,s3));
+        let posicion;
+        let posEmpezar = 0;
+        let veces = 0;
+        do{
+            posicion=s1.indexOf(s2,posEmpezar);
+            if(posicion!=1){
+            posEmpezar=s2.length+posicion;
+            veces++
+            }
+        }while(posicion>-1);
+        alert(veces);
+        alert(s1.replaceAll(s2,s3));
+    </script>
+</body>
+</html>

@@ -1,59 +1,68 @@
-function askNum(texto1, texto2) {
-    let num;
+function askNumber() {
     do {
-        num = prompt("Escriba un número del 1 al 10");
-        if (num == "") alert("Error! el número no puede estar vacío");
-        if (isNaN(num) || num > 10 || num <= 0) { alert(texto2) }
-    } while (isNaN(num) || num > 10 || num <= 0 || num == "");
-    return +num;
+        number = prompt("Introduce un numero");
+        if (isNaN(number) || number == "") alert("Por favor, introduce un numero");
+    } while (isNaN(number) || number == "");
+
+    return number;
 }
 
-let number1, number2;
-
-number1 = askNum("Dame un número", "Error, quiero un número");
-number2 = askNum("Dame un número", "Error, quiero un número");
-
-let display;
+function askMode() {
     do {
-        display = prompt("¿LISTA, PÁRRAFO o TABLA?")
-        if (display != "LISTA" && display != "PARRAFO" && display != "TABLA") {
-            alert("Tienes que elegir entre LISTA, PARRAFO o TABLA")
-        }
-    } while (display != "LISTA" && display != "PARRAFO" && display != "TABLA");
+        mode = (prompt("Introduce un modo de visualizacion entre LISTA, PARRAFO, TABLA o DESPLEGABLE")).toLocaleUpperCase();
+        console.log(mode);
+        if (mode !== "LISTA" && mode !== "PARRAFO" && mode !== "TABLA" && mode !== "DESPLEGABLE") alert("Por favor, introduce un modo valido");
+    } while (mode !== "LISTA" && mode !== "PARRAFO" && mode !== "TABLA" && mode !== "DESPLEGABLE")
+    return mode;
+}
 
-
-let min = Math.min(number1, number2);
-let max = Math.max(number1, number2);
-
-if (display == "LISTA"); 
-
-function list() {
+function makeList(table,rows) {
     document.write("<ul>");
-    for (let i = 1; i <= max; i++) {
-        document.write("<li>" + min + " x " + i + " = " + min * i + "</li>")
-        document.write("</ul>")
+    for (let i = 1; i <= rows; i++) {
+        document.write("<li>"+table+"x"+i+"="+(table*i)+"</li>");
     }
-}
-list(min, max);
-
-if (display == "TABLA");
-function table() {
-    document.write("<table>");
-    document.write("<tr>");
-    for (let i = 1; i <= max; i++) {
-        document.write("<td>" + min + " x " + i + " = " + (min * i) + "</td>")
-        document.write("</tr>")
-        document.write("</table>")
-    }
+    document.write("</ul>")
 }
 
-table(min, max);
-
-if (display == "PARRAFO");
-
-function paragraph() {
-    for (let i = 1; i <= max; i++) {
-        document.write("<p>" + min + " x " + i + " = " + min * i + "</p> <br>");
+function makeParagraph(table,rows) {
+    document.write('<div style="border: 1px solid black;">')
+    for (let i = 1; i <= rows; i++) {
+        document.write(table+"x"+i+"="+(table*i)+"<br>");
     }
+    document.write('</div>')
 }
-paragraph(min, max);
+
+function makeTable(table,rows) {
+    document.write("<style> table, th, td {border: 1px solid black; padding: 5px}</style>")
+    document.write("<table border = 1 border-collapse = 1>");
+    for (let i = 1; i <= rows; i++) {
+        document.write("<tr>");
+        document.write("<td>"+table+"x"+i +"</td>");
+        document.write("<td> = </td>");
+        document.write("<td>"+(table*i)+"</td>");
+        document.write("</tr>");
+
+    }
+    document.write("</table>")
+}
+
+function makeDropdown() {
+    document.write('<select id="dropdown">')
+        for (let i = 1; i <= rows; i++) {
+            document.write("<Option>"+table+"x"+i+"="+(table*i)+"</Option>+<br>");
+        }
+    document.write("</select>")
+  }
+
+let number1 = askNumber();
+let number2 = askNumber();
+
+table = Math.min(number1, number2);
+rows = Math.max(number1, number2);
+
+mode = askMode();
+
+if (mode === "LISTA") makeList(table,rows);
+else if (mode === "PARRAFO") makeParagraph(table,rows);
+else if (mode === "TABLA") makeTable(table,rows);
+else if (mode === "DESPLEGABLE") makeDropdown(table,rows);

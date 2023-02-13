@@ -1,0 +1,13 @@
+'use strict';
+let a = new Array(1,2,3,4);
+console.log(a.join("==>"));
+a.push(5,6);
+console.log(a.join("==>"));
+a.unshift(-1,-2);
+console.log(a.join("==>"));
+a.splice(1, 3);
+console.log(a.join("==>"));
+a.reverse();
+console.log(a.join("==>"));
+a.sort();
+console.log(a.join("==>"));
