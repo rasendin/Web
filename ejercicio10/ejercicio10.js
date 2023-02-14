@@ -149,3 +149,22 @@ const reducir = numeros.reduce(fu => {
     return inicio;
 });
 console.log(reducir);
+
+// 4.Dada una matriz de objetos con propiedades nombre y edad, use el método Array.sort() para ordenar los objetos por edad de menor a mayor.
+
+let personas = {
+    nombre : ["Antonio", "José Luis"],
+    edad : [35, 80],
+}
+
+personas.edad.sort((a,b)=>a - b);
+
+console.log(personas);
+
+// 5.Dada una matriz de números, use el método Array.forEach() para imprimir cada número en la consola.
+
+let numbers = new Array (3,5,8,10,62,1000);
+
+numbers.forEach((e) => {
+    console.log(e);
+})
